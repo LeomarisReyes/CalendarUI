@@ -1,0 +1,59 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="CalendarUI.Views.SchedulePage"
+             BackgroundColor="#f3f4f6">
+    <ContentPage.Content>
+
+        <Grid Padding="25,0,0,0" RowDefinitions="Auto, Auto, Auto, *" ColumnDefinitions="Auto, *, Auto"> 
+            <!--Corner image-->
+            <Image Grid.Row="0" Grid.Column="2" Source="Corner" HeightRequest="200"/>
+            <!--Schedule timeline-->
+            <Image Grid.Row="1" Grid.Column="0" Source="Calendar" HeightRequest="50" Margin="0,-50,0,0" VerticalOptions="Start"/>
+            <BoxView Grid.Row="2" Grid.Column="0"  VerticalOptions="Start" WidthRequest="4" Color="#bfc0c0" HeightRequest="70" Margin="25,-50,25,10"/>
+            <!-- Date description-->
+            <Label Grid.Row="1" Grid.Column="1" Grid.ColumnSpan="2" Text="Monday, 5th&#10;April" Margin="0,-50,0,0" TextColor="#535257" FontAttributes="Bold" FontSize="45" Padding="10,0,0,0"/>
+
+            <!-- Shedule list structure-->
+                 <CollectionView ItemsSource="{Binding schedule}"
+                                 Grid.Row="3" Grid.Column="0" Grid.ColumnSpan="3"
+                                 VerticalScrollBarVisibility="Never"
+                                 VerticalOptions="Start">
+                     <CollectionView.ItemTemplate>
+                           <DataTemplate>
+                               <Grid RowDefinitions="Auto, Auto" ColumnDefinitions="Auto, *">
+                                   <!-- Schedule time-->
+                                    <Label Grid.Row="0" Grid.Column="0" Text="{Binding Hour}"  TextColor="#bfc0c0" FontAttributes="Bold" VerticalOptions="Start"/>
+                                   <!-- Vertical Line-->
+                                   <BoxView Grid.Row="1" Grid.Column="0" WidthRequest="4" Color="Silver" HeightRequest="120" Margin="25,0,50,0" />
+                                   <!-- Card -->
+                                    <Frame Grid.Row="0" Grid.RowSpan="2" Grid.Column="1" CornerRadius="25" HasShadow="False" Margin="5,0,30,60">
+                                        <StackLayout>
+                                            <Label Text="{Binding Title}" FontAttributes="Bold" TextColor="#535257" FontSize="18"/>
+                                            <Label Text="{Binding Description}" TextColor="Silver" FontSize="18"/>
+                                              <!-- Features-->
+                                             <CollectionView ItemsSource="{Binding Features}"
+                                                             Margin="0,20,0,0"
+                                                             HorizontalScrollBarVisibility="Never"
+                                                             HeightRequest="50"
+                                                             ItemsLayout="HorizontalList">
+                                                <CollectionView.ItemTemplate>
+                                                   <DataTemplate>
+                                                          <StackLayout Margin="0,0,10,0">
+                                                                <Label Text="{Binding Name}" BackgroundColor="{Binding BGColor}" FontAttributes="Bold" TextColor="{Binding TxColor}" Padding="10" HorizontalOptions="Start"/>
+                                                          </StackLayout>
+                                                       </DataTemplate>
+                                                 </CollectionView.ItemTemplate>
+                                            </CollectionView>
+
+                                         </StackLayout>
+                                    </Frame> 
+
+                                </Grid>
+                            </DataTemplate>
+                     </CollectionView.ItemTemplate>
+               </CollectionView> 
+        </Grid> 
+    </ContentPage.Content>
+</ContentPage>
+

@@ -1,0 +1,42 @@
+﻿<Properties StartupConfiguration="{9F67B6B5-A31C-48F5-9DE5-224A008B7093}|Default">
+  <MonoDevelop.Ide.Workbench ActiveDocument="CalendarUI/Views/SchedulePage.xaml">
+    <Files>
+      <File FileName="CalendarUI/App.xaml.cs" Line="13" Column="46" />
+      <File FileName="CalendarUI/Models/Schedule.cs" />
+      <File FileName="CalendarUI/Models/Features.cs" />
+      <File FileName="CalendarUI/ViewModels/ScheduleViewModel.cs" />
+      <File FileName="CalendarUI/Views/SchedulePage.xaml" Line="8" Column="106" />
+      <File FileName="CalendarUI/Views/SchedulePage.xaml.cs" Line="13" Column="37" />
+    </Files>
+    <Pads>
+      <Pad Id="ProjectPad">
+        <State name="__root__">
+          <Node name="CalendarUI" expanded="True" selected="True">
+            <Node name="CalendarUI" expanded="True">
+              <Node name="Models" expanded="True" />
+              <Node name="ViewModels" expanded="True" />
+              <Node name="Views" expanded="True">
+                <Node name="SchedulePage.xaml" expanded="True" />
+              </Node>
+              <Node name="App.xaml" expanded="True" />
+            </Node>
+            <Node name="CalendarUI.iOS" expanded="True">
+              <Node name="Resources" expanded="True" />
+            </Node>
+          </Node>
+        </State>
+      </Pad>
+      <Pad Id="MonoDevelop.Debugger.WatchPad">
+        <State />
+      </Pad>
+    </Pads>
+  </MonoDevelop.Ide.Workbench>
+  <MonoDevelop.Ide.ItemProperties.CalendarUI.Android PreferredExecutionTarget="Android.pixel_2_pie_9_0_-_api_28" />
+  <MonoDevelop.Ide.DebuggingService.PinnedWatches />
+  <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" />
+  <MonoDevelop.Ide.DebuggingService.Breakpoints>
+    <BreakpointStore />
+  </MonoDevelop.Ide.DebuggingService.Breakpoints>
+  <MultiItemStartupConfigurations />
+  <MonoDevelop.Ide.ItemProperties.CalendarUI.iOS PreferredExecutionTarget="MonoDevelop.IPhone.IPhoneSimulatorTarget.19246DB7-ED17-4769-94AD-22BF5FA8FA24" />
+</Properties>
